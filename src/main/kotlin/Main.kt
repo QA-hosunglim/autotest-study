@@ -76,7 +76,7 @@ fun MultiplicationTable() {
                 // 1부터 9까지 반복하며 구구단 출력
                 (1..9).forEach { println("$단수 * $it = ${단수 * it}") }
             }
-            // 유효하지 않은 입력인 경우 ()
+            // 유효하지 않은 입력인 경우 (test)
             else -> println("유효하지 않은 입력입니다. 다시 시도하세요.")
         }
     }
