@@ -1,0 +1,13 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="FirstTestSuite">
+    <test name="FindMinMaxTest">
+        <classes>
+            <class name="org.example.FindMinMaxTest"/>
+        </classes>
+    </test>
+    <test name="MultiplicationTableTest">
+        <classes>
+            <class name="org.example.MultiplicationTableTest"/>
+        </classes>
+    </test>
+</suite>
