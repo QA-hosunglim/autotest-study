@@ -1,0 +1,19 @@
+name: unit Test
+
+on:
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: action/checkout@v3
+
+      - name: Run TestNG tests
+        uses: ./gradlew clean test
