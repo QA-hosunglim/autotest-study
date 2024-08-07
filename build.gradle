@@ -2,6 +2,7 @@ plugins {
     // Kotlin JVM 플러그인과 애플리케이션 플러그인을 사용합니다.
     id 'org.jetbrains.kotlin.jvm' version '1.9.24'
     id 'application'
+    id 'java'
 }
 
 // 그룹과 버전 설정
@@ -15,13 +16,31 @@ repositories {
 
 dependencies {
     // 프로젝트의 의존성을 설정합니다.
-    implementation 'org.jetbrains.kotlin:kotlin-stdlib'  // Kotlin 표준 라이브러리
-    testImplementation 'org.jetbrains.kotlin:kotlin-test'  // Kotlin 테스트 라이브러리
+    testImplementation 'org.testng:testng:7.8.0'
+}
+
+test {
+    useTestNG{
+        suites "src/test/resources/testng.xml"  // TestNG XML 파일 경로
+    }
 }
 
 application {
     // 애플리케이션의 메인 클래스를 지정합니다.
     mainClassName = 'org.example.MainKt'  // 실행할 메인 클래스의 이름
+}
+
+sourceSets {
+    main {
+        kotlin {
+            srcDirs = ["src/main/kotlin"]
+        }
+    }
+    test {
+        kotlin {
+            srcDirs = ["src/test/kotlin"]
+        }
+    }
 }
 
 // 사용자 정의 Gradle 작업을 등록합니다.
@@ -38,5 +57,12 @@ tasks.register('runMultiplicationTable', JavaExec) {
 tasks.register('runSolution', JavaExec) {
     classpath = sourceSets.main.runtimeClasspath
     main = 'org.example.Study_2Kt'
+    standardInput = System.in
+}
+
+// 사용자 정의 Gradle 작업을 등록합니다.
+tasks.register('MultiplicationTable', JavaExec) {
+    classpath = sourceSets.main.runtimeClasspath
+    main = 'org.example.MultiplicationTableKt'
     standardInput = System.in
 }
