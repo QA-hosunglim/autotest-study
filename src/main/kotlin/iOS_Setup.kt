@@ -1,3 +1,5 @@
+package org.example
+
 import io.appium.java_client.ios.IOSDriver
 import io.appium.java_client.remote.options.BaseOptions
 import org.openqa.selenium.By

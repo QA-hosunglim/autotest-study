@@ -1,3 +1,5 @@
+package org.example
+
 import com.sun.jdi.Value
 import io.appium.java_client.android.AndroidDriver
 import io.appium.java_client.remote.options.BaseOptions
