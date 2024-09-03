@@ -16,7 +16,9 @@ repositories {
 
 dependencies {
     // 프로젝트의 의존성을 설정합니다.
-    testImplementation 'org.testng:testng:7.8.0'
+    implementation 'org.testng:testng:7.8.0'
+    implementation 'io.appium:java-client:8.6.0'
+
 }
 
 test {
