@@ -1,14 +1,13 @@
 package org.example
 
-import com.sun.jdi.Value
 import io.appium.java_client.android.AndroidDriver
 import io.appium.java_client.remote.options.BaseOptions
+import org.openqa.selenium.By
 import org.testng.annotations.AfterMethod
 import org.testng.annotations.BeforeMethod
 import org.testng.annotations.Test
 import java.net.MalformedURLException
 import java.net.URL
-import org.openqa.selenium.By
 
 class Android_Setup {
     private lateinit var driver: AndroidDriver
