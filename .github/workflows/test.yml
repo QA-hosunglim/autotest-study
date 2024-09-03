@@ -13,7 +13,7 @@ jobs:
 
     steps:
       - name: Checkout autotest-study
-        uses: actions/checkout@v3
+        uses: action/checkout@v3
 
       - name: Run TestNG tests
         uses: ./gradlew clean test
