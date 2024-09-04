@@ -10,4 +10,14 @@
             <class name="org.example.MultiplicationTableTest"/>
         </classes>
     </test>
+    <test name="AndroidSetupTest">
+        <classes>
+            <class name="org.example.Android_Setup"/>
+        </classes>
+    </test>
+    <test name="iOSSetupTest">
+        <classes>
+            <class name="org.example.iOS_Setup"/>
+        </classes>
+    </test>
 </suite>
